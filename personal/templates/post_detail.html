@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.title }}</title>
+</head>
+<body>
+    <main>
+        <h1>{{ post.title }}</h1>
+        <p><small>Posted on {{ post.date|date:"F d, Y" }}</small></p>
+        <div>
+            {{ post.body|safe }}
+        </div>
+        {% if post.signature %}
+            <p>— {{ post.signature }}</p>
+        {% endif %}
+        <a href="{% url 'blog' %}">Back to blog</a>
+    </main>
+</body>
+</html>

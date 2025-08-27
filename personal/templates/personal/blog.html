@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .blog-post {
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .blog-post h2 {
+            color: #2c3e50;
+        }
+        .blog-post small {
+            color: #7f8c8d;
+        }
+        .signature {
+            font-style: italic;
+            color: #34495e;
+            margin-top: 10px;
+        }
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% for post in posts %}
+          <div class="blog-post">
+            <h2>{{ post.title }}</h2>
+            <small>Posted on {{ post.date|date:"F d, Y" }}</small>
+            <p>{{ post.body }}</p>
+            {% if post.signature %}
+              <p class="signature">— {{ post.signature }}</p>
+            {% endif %}
+            <a href="{% url 'post_detail' post.id %}" class="read-more">Read more</a>
+          </div>
+        {% empty %}
+          <p>No blog posts yet.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
