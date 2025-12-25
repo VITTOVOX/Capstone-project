@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <article>
+    <h1>{{ post.title }}</h1>
+
+    <p>
+      <small>
+        Posted on {{ post.date }}
+        {% if post.signature %}
+          | {{ post.signature }}
+        {% endif %}
+      </small>
+    </p>
+
+    <hr>
+
+    <p>{{ post.body }}</p>
+  </article>
+{% endblock %}

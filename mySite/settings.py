@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "*").split(",")
 
 LOGIN_URL = 'login'  
 LOGIN_REDIRECT_URL = '/'  
@@ -40,7 +42,13 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles', 
+    'django.contrib.staticfiles',
+
+    'blog',
+    'polls',
+    'user_auth',
+
+    # optional: keep personal temporarily while migrating
     'personal',
 ]
 

@@ -23,11 +23,12 @@ class Post(models.Model):
         verbose_name="Body"
     )
     signature = models.CharField(
-        max_length=100,
-        blank=True, null=True,
-        help_text="Optional author signature",
-        verbose_name="Signature"
-    )
+    max_length=100,
+    default="Anonymous",
+    help_text="Author signature",
+    verbose_name="Signature"
+
+    )   
     date = models.DateTimeField(
         auto_now_add=True,
         help_text="Date the post was created",
