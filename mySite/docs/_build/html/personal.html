@@ -1,0 +1,743 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>personal package &mdash; mySite 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="manage module" href="manage.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            mySite
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Project Structure</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mySite.html">mySite package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manage.html">manage module</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Applications</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">personal package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-personal.admin">personal.admin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-personal.apps">personal.apps module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#personal.apps.PersonalConfig"><code class="docutils literal notranslate"><span class="pre">PersonalConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#personal.apps.PersonalConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">PersonalConfig.default_auto_field</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.apps.PersonalConfig.name"><code class="docutils literal notranslate"><span class="pre">PersonalConfig.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-personal.forms">personal.forms module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#personal.forms.CustomUserCreationForm"><code class="docutils literal notranslate"><span class="pre">CustomUserCreationForm</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#personal.forms.CustomUserCreationForm.Meta"><code class="docutils literal notranslate"><span class="pre">CustomUserCreationForm.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.forms.CustomUserCreationForm.base_fields"><code class="docutils literal notranslate"><span class="pre">CustomUserCreationForm.base_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.forms.CustomUserCreationForm.declared_fields"><code class="docutils literal notranslate"><span class="pre">CustomUserCreationForm.declared_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.forms.CustomUserCreationForm.media"><code class="docutils literal notranslate"><span class="pre">CustomUserCreationForm.media</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-personal.models">personal.models module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#personal.models.Choice"><code class="docutils literal notranslate"><span class="pre">Choice</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Choice.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Choice.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Choice.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Choice.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Choice.choice_text"><code class="docutils literal notranslate"><span class="pre">Choice.choice_text</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Choice.clean"><code class="docutils literal notranslate"><span class="pre">Choice.clean()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Choice.id"><code class="docutils literal notranslate"><span class="pre">Choice.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Choice.objects"><code class="docutils literal notranslate"><span class="pre">Choice.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Choice.question"><code class="docutils literal notranslate"><span class="pre">Choice.question</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Choice.question_id"><code class="docutils literal notranslate"><span class="pre">Choice.question_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Choice.save"><code class="docutils literal notranslate"><span class="pre">Choice.save()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Choice.votes"><code class="docutils literal notranslate"><span class="pre">Choice.votes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#personal.models.Post"><code class="docutils literal notranslate"><span class="pre">Post</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Post.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Post.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Post.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Post.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Post.POST_TYPES"><code class="docutils literal notranslate"><span class="pre">Post.POST_TYPES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Post.body"><code class="docutils literal notranslate"><span class="pre">Post.body</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Post.date"><code class="docutils literal notranslate"><span class="pre">Post.date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Post.get_absolute_url"><code class="docutils literal notranslate"><span class="pre">Post.get_absolute_url()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Post.get_next_by_date"><code class="docutils literal notranslate"><span class="pre">Post.get_next_by_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Post.get_post_type_display"><code class="docutils literal notranslate"><span class="pre">Post.get_post_type_display()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Post.get_previous_by_date"><code class="docutils literal notranslate"><span class="pre">Post.get_previous_by_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Post.id"><code class="docutils literal notranslate"><span class="pre">Post.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Post.objects"><code class="docutils literal notranslate"><span class="pre">Post.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Post.post_type"><code class="docutils literal notranslate"><span class="pre">Post.post_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Post.signature"><code class="docutils literal notranslate"><span class="pre">Post.signature</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Post.title"><code class="docutils literal notranslate"><span class="pre">Post.title</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Post.updated_at"><code class="docutils literal notranslate"><span class="pre">Post.updated_at</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#personal.models.Question"><code class="docutils literal notranslate"><span class="pre">Question</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Question.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Question.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Question.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Question.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Question.choices"><code class="docutils literal notranslate"><span class="pre">Question.choices</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Question.get_absolute_url"><code class="docutils literal notranslate"><span class="pre">Question.get_absolute_url()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Question.get_next_by_pub_date"><code class="docutils literal notranslate"><span class="pre">Question.get_next_by_pub_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Question.get_next_by_updated_at"><code class="docutils literal notranslate"><span class="pre">Question.get_next_by_updated_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Question.get_previous_by_pub_date"><code class="docutils literal notranslate"><span class="pre">Question.get_previous_by_pub_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Question.get_previous_by_updated_at"><code class="docutils literal notranslate"><span class="pre">Question.get_previous_by_updated_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Question.id"><code class="docutils literal notranslate"><span class="pre">Question.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Question.objects"><code class="docutils literal notranslate"><span class="pre">Question.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Question.pub_date"><code class="docutils literal notranslate"><span class="pre">Question.pub_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Question.question_text"><code class="docutils literal notranslate"><span class="pre">Question.question_text</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.models.Question.updated_at"><code class="docutils literal notranslate"><span class="pre">Question.updated_at</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-personal.tests">personal.tests module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#personal.tests.QuestionModelTests"><code class="docutils literal notranslate"><span class="pre">QuestionModelTests</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#personal.tests.QuestionModelTests.test_default_votes_is_zero"><code class="docutils literal notranslate"><span class="pre">QuestionModelTests.test_default_votes_is_zero()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#personal.tests.QuestionModelTests.test_str_returns_question_text"><code class="docutils literal notranslate"><span class="pre">QuestionModelTests.test_str_returns_question_text()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-personal.urls">personal.urls module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-personal.views">personal.views module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#personal.views.blog_view"><code class="docutils literal notranslate"><span class="pre">blog_view()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#personal.views.cv_view"><code class="docutils literal notranslate"><span class="pre">cv_view()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#personal.views.index_view"><code class="docutils literal notranslate"><span class="pre">index_view()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#personal.views.poll_detail"><code class="docutils literal notranslate"><span class="pre">poll_detail()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#personal.views.poll_results"><code class="docutils literal notranslate"><span class="pre">poll_results()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#personal.views.polls_list"><code class="docutils literal notranslate"><span class="pre">polls_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#personal.views.post_detail"><code class="docutils literal notranslate"><span class="pre">post_detail()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#personal.views.register"><code class="docutils literal notranslate"><span class="pre">register()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#personal.views.vote"><code class="docutils literal notranslate"><span class="pre">vote()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-personal">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">mySite</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">personal package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/personal.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="personal-package">
+<h1>personal package<a class="headerlink" href="#personal-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-personal.admin">
+<span id="personal-admin-module"></span><h2>personal.admin module<a class="headerlink" href="#module-personal.admin" title="Link to this heading"></a></h2>
+<p>Admin configuration for the polls/blog application.</p>
+<p>This module registers models with the Django admin site so that
+they can be managed through the built-in admin interface.</p>
+</section>
+<section id="module-personal.apps">
+<span id="personal-apps-module"></span><h2>personal.apps module<a class="headerlink" href="#module-personal.apps" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="personal.apps.PersonalConfig">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">personal.apps.</span></span><span class="sig-name descname"><span class="pre">PersonalConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/personal/apps.html#PersonalConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.apps.PersonalConfig" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.apps.PersonalConfig.default_auto_field">
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#personal.apps.PersonalConfig.default_auto_field" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.apps.PersonalConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'personal'</span></em><a class="headerlink" href="#personal.apps.PersonalConfig.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-personal.forms">
+<span id="personal-forms-module"></span><h2>personal.forms module<a class="headerlink" href="#module-personal.forms" title="Link to this heading"></a></h2>
+<p>Custom forms for user registration.</p>
+<p>This module defines forms that extend Django’s authentication
+system for additional functionality.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="personal.forms.CustomUserCreationForm">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">personal.forms.</span></span><span class="sig-name descname"><span class="pre">CustomUserCreationForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/personal/forms.html#CustomUserCreationForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.forms.CustomUserCreationForm" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">UserCreationForm</span></code></p>
+<p>User registration form with an extra first name field.</p>
+<p>Inherits from Django’s built-in UserCreationForm and requires
+users to provide a first name at signup.</p>
+<dl class="simple">
+<dt>Fields included:</dt><dd><ul class="simple">
+<li><p>username</p></li>
+<li><p>first_name</p></li>
+<li><p>password1</p></li>
+<li><p>password2</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="personal.forms.CustomUserCreationForm.Meta">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/personal/forms.html#CustomUserCreationForm.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.forms.CustomUserCreationForm.Meta" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.forms.CustomUserCreationForm.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['username',</span> <span class="pre">'first_name',</span> <span class="pre">'password1',</span> <span class="pre">'password2']</span></em><a class="headerlink" href="#personal.forms.CustomUserCreationForm.Meta.fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.forms.CustomUserCreationForm.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#personal.forms.CustomUserCreationForm.Meta.model" title="Link to this definition"></a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.forms.CustomUserCreationForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'first_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'password1':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'password2':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'username':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#personal.forms.CustomUserCreationForm.base_fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.forms.CustomUserCreationForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'first_name':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'password1':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'password2':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#personal.forms.CustomUserCreationForm.declared_fields" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="personal.forms.CustomUserCreationForm.media">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#personal.forms.CustomUserCreationForm.media" title="Link to this definition"></a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-personal.models">
+<span id="personal-models-module"></span><h2>personal.models module<a class="headerlink" href="#module-personal.models" title="Link to this heading"></a></h2>
+<p>Database models for the polls/blog application.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="personal.models.Choice">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">personal.models.</span></span><span class="sig-name descname"><span class="pre">Choice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/personal/models.html#Choice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.models.Choice" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Selectable option linked to a Question with a vote counter.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="personal.models.Choice.DoesNotExist">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#personal.models.Choice.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="personal.models.Choice.MultipleObjectsReturned">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#personal.models.Choice.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Choice.choice_text">
+<span class="sig-name descname"><span class="pre">choice_text</span></span><a class="headerlink" href="#personal.models.Choice.choice_text" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="personal.models.Choice.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/personal/models.html#Choice.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.models.Choice.clean" title="Link to this definition"></a></dt>
+<dd><p>Ensure votes cannot be negative.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Choice.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#personal.models.Choice.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Choice.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#personal.models.Choice.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Choice.question">
+<span class="sig-name descname"><span class="pre">question</span></span><a class="headerlink" href="#personal.models.Choice.question" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Choice.question_id">
+<span class="sig-name descname"><span class="pre">question_id</span></span><a class="headerlink" href="#personal.models.Choice.question_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="personal.models.Choice.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/personal/models.html#Choice.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.models.Choice.save" title="Link to this definition"></a></dt>
+<dd><p>Validate the model before saving to the database.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Choice.votes">
+<span class="sig-name descname"><span class="pre">votes</span></span><a class="headerlink" href="#personal.models.Choice.votes" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="personal.models.Post">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">personal.models.</span></span><span class="sig-name descname"><span class="pre">Post</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/personal/models.html#Post"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.models.Post" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Blog/general post with title, body, timestamps and type.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="personal.models.Post.DoesNotExist">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#personal.models.Post.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="personal.models.Post.MultipleObjectsReturned">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#personal.models.Post.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Post.POST_TYPES">
+<span class="sig-name descname"><span class="pre">POST_TYPES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('post',</span> <span class="pre">'Post'),</span> <span class="pre">('blog',</span> <span class="pre">'Blog</span> <span class="pre">Post')]</span></em><a class="headerlink" href="#personal.models.Post.POST_TYPES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Post.body">
+<span class="sig-name descname"><span class="pre">body</span></span><a class="headerlink" href="#personal.models.Post.body" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Post.date">
+<span class="sig-name descname"><span class="pre">date</span></span><a class="headerlink" href="#personal.models.Post.date" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="personal.models.Post.get_absolute_url">
+<span class="sig-name descname"><span class="pre">get_absolute_url</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/personal/models.html#Post.get_absolute_url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.models.Post.get_absolute_url" title="Link to this definition"></a></dt>
+<dd><p>Return the canonical URL for this post.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="personal.models.Post.get_next_by_date">
+<span class="sig-name descname"><span class="pre">get_next_by_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#personal.models.Post.get_next_by_date" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="personal.models.Post.get_post_type_display">
+<span class="sig-name descname"><span class="pre">get_post_type_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.CharField:</span> <span class="pre">post_type&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#personal.models.Post.get_post_type_display" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="personal.models.Post.get_previous_by_date">
+<span class="sig-name descname"><span class="pre">get_previous_by_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#personal.models.Post.get_previous_by_date" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Post.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#personal.models.Post.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Post.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#personal.models.Post.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Post.post_type">
+<span class="sig-name descname"><span class="pre">post_type</span></span><a class="headerlink" href="#personal.models.Post.post_type" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Post.signature">
+<span class="sig-name descname"><span class="pre">signature</span></span><a class="headerlink" href="#personal.models.Post.signature" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Post.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#personal.models.Post.title" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Post.updated_at">
+<span class="sig-name descname"><span class="pre">updated_at</span></span><a class="headerlink" href="#personal.models.Post.updated_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="personal.models.Question">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">personal.models.</span></span><span class="sig-name descname"><span class="pre">Question</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/personal/models.html#Question"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.models.Question" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>Poll question with publish and update timestamps.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="personal.models.Question.DoesNotExist">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#personal.models.Question.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="personal.models.Question.MultipleObjectsReturned">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#personal.models.Question.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Question.choices">
+<span class="sig-name descname"><span class="pre">choices</span></span><a class="headerlink" href="#personal.models.Question.choices" title="Link to this definition"></a></dt>
+<dd><p>Accessor to the related objects manager on the reverse side of a
+many-to-one relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Parent.children</span></code> is a <code class="docutils literal notranslate"><span class="pre">ReverseManyToOneDescriptor</span></code> instance.</p>
+<p>Most of the implementation is delegated to a dynamically defined manager
+class built by <code class="docutils literal notranslate"><span class="pre">create_forward_many_to_many_manager()</span></code> defined below.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="personal.models.Question.get_absolute_url">
+<span class="sig-name descname"><span class="pre">get_absolute_url</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/personal/models.html#Question.get_absolute_url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.models.Question.get_absolute_url" title="Link to this definition"></a></dt>
+<dd><p>Return the canonical URL for this question.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="personal.models.Question.get_next_by_pub_date">
+<span class="sig-name descname"><span class="pre">get_next_by_pub_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">pub_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#personal.models.Question.get_next_by_pub_date" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="personal.models.Question.get_next_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_next_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#personal.models.Question.get_next_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="personal.models.Question.get_previous_by_pub_date">
+<span class="sig-name descname"><span class="pre">get_previous_by_pub_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">pub_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#personal.models.Question.get_previous_by_pub_date" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="personal.models.Question.get_previous_by_updated_at">
+<span class="sig-name descname"><span class="pre">get_previous_by_updated_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_at&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#personal.models.Question.get_previous_by_updated_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Question.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#personal.models.Question.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Question.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#personal.models.Question.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Question.pub_date">
+<span class="sig-name descname"><span class="pre">pub_date</span></span><a class="headerlink" href="#personal.models.Question.pub_date" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Question.question_text">
+<span class="sig-name descname"><span class="pre">question_text</span></span><a class="headerlink" href="#personal.models.Question.question_text" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="personal.models.Question.updated_at">
+<span class="sig-name descname"><span class="pre">updated_at</span></span><a class="headerlink" href="#personal.models.Question.updated_at" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-personal.tests">
+<span id="personal-tests-module"></span><h2>personal.tests module<a class="headerlink" href="#module-personal.tests" title="Link to this heading"></a></h2>
+<p>Test suite for the polls/blog application.</p>
+<p>This module contains unit tests for models, views, and other
+functionality within the application.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="personal.tests.QuestionModelTests">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">personal.tests.</span></span><span class="sig-name descname"><span class="pre">QuestionModelTests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/personal/tests.html#QuestionModelTests"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.tests.QuestionModelTests" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Tests for the Question model.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="personal.tests.QuestionModelTests.test_default_votes_is_zero">
+<span class="sig-name descname"><span class="pre">test_default_votes_is_zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/personal/tests.html#QuestionModelTests.test_default_votes_is_zero"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.tests.QuestionModelTests.test_default_votes_is_zero" title="Link to this definition"></a></dt>
+<dd><p>Newly created questions should have zero votes by default.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="personal.tests.QuestionModelTests.test_str_returns_question_text">
+<span class="sig-name descname"><span class="pre">test_str_returns_question_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/personal/tests.html#QuestionModelTests.test_str_returns_question_text"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.tests.QuestionModelTests.test_str_returns_question_text" title="Link to this definition"></a></dt>
+<dd><p>__str__() should return the question text.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-personal.urls">
+<span id="personal-urls-module"></span><h2>personal.urls module<a class="headerlink" href="#module-personal.urls" title="Link to this heading"></a></h2>
+</section>
+<section id="module-personal.views">
+<span id="personal-views-module"></span><h2>personal.views module<a class="headerlink" href="#module-personal.views" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="personal.views.blog_view">
+<span class="sig-prename descclassname"><span class="pre">personal.views.</span></span><span class="sig-name descname"><span class="pre">blog_view</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/personal/views.html#blog_view"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.views.blog_view" title="Link to this definition"></a></dt>
+<dd><p>Display a list of blog posts ordered by date (newest first).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The incoming HTTP request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Renders the blog template with all blog posts.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="personal.views.cv_view">
+<span class="sig-prename descclassname"><span class="pre">personal.views.</span></span><span class="sig-name descname"><span class="pre">cv_view</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/personal/views.html#cv_view"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.views.cv_view" title="Link to this definition"></a></dt>
+<dd><p>Display the personal CV page.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="personal.views.index_view">
+<span class="sig-prename descclassname"><span class="pre">personal.views.</span></span><span class="sig-name descname"><span class="pre">index_view</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/personal/views.html#index_view"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.views.index_view" title="Link to this definition"></a></dt>
+<dd><p>Display the personal index (home) page.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="personal.views.poll_detail">
+<span class="sig-prename descclassname"><span class="pre">personal.views.</span></span><span class="sig-name descname"><span class="pre">poll_detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">question_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/personal/views.html#poll_detail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.views.poll_detail" title="Link to this definition"></a></dt>
+<dd><p>Display the detail page for a single poll question.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The incoming HTTP request.</p></li>
+<li><p><strong>question_id</strong> (<em>int</em>) – The primary key of the Question.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Renders the poll detail template with the question.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="personal.views.poll_results">
+<span class="sig-prename descclassname"><span class="pre">personal.views.</span></span><span class="sig-name descname"><span class="pre">poll_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">question_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/personal/views.html#poll_results"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.views.poll_results" title="Link to this definition"></a></dt>
+<dd><p>Display the results for a single poll question.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The incoming HTTP request.</p></li>
+<li><p><strong>question_id</strong> (<em>int</em>) – The primary key of the Question.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Renders the poll results template with the question.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="personal.views.polls_list">
+<span class="sig-prename descclassname"><span class="pre">personal.views.</span></span><span class="sig-name descname"><span class="pre">polls_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/personal/views.html#polls_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.views.polls_list" title="Link to this definition"></a></dt>
+<dd><p>Display a list of all poll questions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The incoming HTTP request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Renders the poll list template with all questions.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="personal.views.post_detail">
+<span class="sig-prename descclassname"><span class="pre">personal.views.</span></span><span class="sig-name descname"><span class="pre">post_detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/personal/views.html#post_detail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.views.post_detail" title="Link to this definition"></a></dt>
+<dd><p>Display a single blog post detail page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The incoming HTTP request.</p></li>
+<li><p><strong>post_id</strong> (<em>int</em>) – The primary key of the Post.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Renders the post detail template with the post context.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="personal.views.register">
+<span class="sig-prename descclassname"><span class="pre">personal.views.</span></span><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/personal/views.html#register"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.views.register" title="Link to this definition"></a></dt>
+<dd><p>Handle user registration using a custom user creation form.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>request</strong> (<em>HttpRequest</em>) – The incoming HTTP request.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Renders the registration page or redirects to login upon success.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="personal.views.vote">
+<span class="sig-prename descclassname"><span class="pre">personal.views.</span></span><span class="sig-name descname"><span class="pre">vote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">question_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/personal/views.html#vote"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#personal.views.vote" title="Link to this definition"></a></dt>
+<dd><p>Handle voting for a given poll question.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> (<em>HttpRequest</em>) – The incoming HTTP request.</p></li>
+<li><p><strong>question_id</strong> (<em>int</em>) – The primary key of the Question being voted on.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Renders the poll detail page if no choice selected,</dt><dd><p>or redirects to the results page if successful.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>HttpResponse</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-personal">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-personal" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="manage.html" class="btn btn-neutral float-left" title="manage module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Vittorio.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
