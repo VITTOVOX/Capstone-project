@@ -68,8 +68,7 @@ def post_detail(request, post_id):
         HttpResponse: Renders the post detail template with the post context.
     """
     post = get_object_or_404(Post, id=post_id)
-    return render(request, 'post_detail.html', {'post': post})
-
+    return render(request, 'personal/post_detail.html', {'post': post})
 
 def blog_view(request):
     """
