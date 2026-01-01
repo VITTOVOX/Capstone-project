@@ -4,7 +4,10 @@ from django.urls import reverse
 from .models import Question, Choice, Post
 from .forms import CustomUserCreationForm
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
 
+def index(request):
+    return render(request, "personal/index.html")
 
 @login_required
 def vote(request, question_id):
